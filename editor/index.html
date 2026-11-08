@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trace Viewer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <div class="title"><strong>Trace</strong><span id="summary" role="status">Loading trace…</span></div>
+    <div class="toolbar">
+      <select id="filter" aria-label="Track filter"><option value="all">CPU + GPU</option><option value="gpu">GPU only</option><option value="cpu">CPU only</option></select>
+      <input id="search" type="search" placeholder="Search events…" aria-label="Search events" autocomplete="off">
+      <span id="matches" aria-live="polite"></span>
+      <button id="previous" title="Previous match (Shift+Enter)" aria-label="Previous match">↑</button>
+      <button id="next" title="Next match (Enter)" aria-label="Next match">↓</button>
+      <div class="separator"></div>
+      <button id="zoom-out" title="Zoom out (S)" aria-label="Zoom out">−</button>
+      <button id="zoom-in" title="Zoom in (W)" aria-label="Zoom in">+</button>
+      <button id="fit" title="Fit entire trace (F)">Fit</button>
+    </div>
+  </header>
+  <div id="message" role="status" hidden></div>
+  <main id="viewport" tabindex="0" aria-label="Trace timeline. W and S zoom, A and D pan, F fits the trace.">
+    <canvas id="timeline" aria-label="CPU and GPU event timeline"></canvas>
+    <div id="spacer"></div>
+  </main>
+  <section id="details" aria-label="Selected event">
+    <div id="event-info"><span class="muted">Select an event to inspect its duration and arguments.</span></div>
+    <pre id="arguments"></pre>
+  </section>
+  <footer><span>Drag to pan · Ctrl/⌘ + scroll to zoom · W/S zoom · A/D pan · F fit · Double-click to focus</span><span id="range"></span></footer>
+  <div id="tooltip" hidden></div>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

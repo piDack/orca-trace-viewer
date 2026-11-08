@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101b2c"/><stop offset="1" stop-color="#101722"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#81bdf5"/><stop offset="1" stop-color="#7ed8b5"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M86 93H210" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif">
+    <text x="84" y="209" font-size="94" font-weight="750" letter-spacing="-3" fill="#f0f6fc">Trace Viewer</text>
+    <text x="88" y="275" font-size="34" fill="#97aabd">PyTorch · Kineto · Chrome Trace</text>
+    <rect x="1194" y="151" width="320" height="69" rx="16" fill="#1a2e3a" stroke="#37544f" stroke-width="2"/>
+    <text x="1354" y="197" text-anchor="middle" font-size="32" font-weight="600" fill="#a0e4c9">.trace.json / .gz</text>
+
+    <rect x="84" y="352" width="1432" height="461" rx="24" fill="#172231" stroke="#304154" stroke-width="2"/>
+    <path d="M284 432H1488 M284 432V784" stroke="#40536a" stroke-width="2"/>
+    <path d="M516 432V784 M748 432V784 M980 432V784 M1212 432V784 M1444 432V784" stroke="#2a394b" stroke-width="2"/>
+    <g fill="#90a4ba" font-size="26">
+      <text x="300" y="405">0 ms</text><text x="521" y="405">2 ms</text><text x="753" y="405">4 ms</text>
+      <text x="985" y="405">6 ms</text><text x="1217" y="405">8 ms</text>
+    </g>
+    <g font-size="36" font-weight="650">
+      <text x="122" y="507" fill="#81bdf5">CPU</text>
+      <text x="122" y="712" fill="#7ed8b5">GPU</text>
+    </g>
+    <g font-size="27" font-weight="600" fill="#112234">
+      <rect x="303" y="465" width="438" height="60" rx="9" fill="#81bdf5"/>
+      <text x="327" y="505">model.forward</text>
+      <rect x="822" y="465" width="630" height="60" rx="9" fill="#81bdf5"/>
+      <text x="846" y="505">model.forward</text>
+      <rect x="361" y="545" width="180" height="47" rx="8" fill="#b6a1ef"/>
+      <text x="382" y="578">matmul</text>
+      <rect x="565" y="545" width="155" height="47" rx="8" fill="#b6a1ef"/>
+      <rect x="871" y="545" width="236" height="47" rx="8" fill="#b6a1ef"/>
+      <text x="891" y="578">attention</text>
+      <rect x="1131" y="545" width="129" height="47" rx="8" fill="#b6a1ef"/>
+      <path d="M113 630H1488" stroke="#2a394b" stroke-width="2"/>
+      <rect x="423" y="671" width="281" height="66" rx="9" fill="#7ed8b5"/>
+      <text x="447" y="714">GEMM</text>
+      <rect x="758" y="671" width="430" height="66" rx="9" fill="#7ed8b5"/>
+      <text x="782" y="714">FlashAttention</text>
+      <rect x="1250" y="671" width="202" height="66" rx="9" fill="#f3bd75"/>
+      <text x="1272" y="714">memcpy</text>
+    </g>
+    <path d="M972 432L980 442L988 432Z" fill="#edf6ff"/>
+    <path d="M980 440V784" stroke="#edf6ff" stroke-width="3"/>
+    <text x="86" y="905" font-size="34" font-weight="550" fill="#c8d5e2">CPU / GPU timeline</text>
+    <circle cx="459" cy="894" r="4" fill="#7188a0"/>
+    <text x="490" y="905" font-size="32" fill="#91a7bc">Search · Zoom · Inspect</text>
+    <text x="1514" y="905" text-anchor="end" font-size="27" fill="#7ed8b5">IN ORCA</text>
+  </g>
+</svg>

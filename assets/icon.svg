@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="#131d2c"/>
+  <rect x="5" y="5" width="246" height="246" rx="51" fill="none" stroke="#304359" stroke-width="2"/>
+  <path d="M43 65H215 M52 56V65 M92 56V65 M132 56V65 M172 56V65 M212 56V65" fill="none" stroke="#73899f" stroke-width="4"/>
+  <path d="M52 76V211 M92 76V211 M132 76V211 M172 76V211 M212 76V211" stroke="#253348" stroke-width="2"/>
+  <rect x="43" y="85" width="102" height="27" rx="6" fill="#81bdf5"/>
+  <rect x="153" y="85" width="62" height="27" rx="6" fill="#81bdf5"/>
+  <rect x="67" y="123" width="55" height="22" rx="5" fill="#b6a1ef"/>
+  <rect x="153" y="123" width="41" height="22" rx="5" fill="#b6a1ef"/>
+  <rect x="83" y="162" width="66" height="31" rx="6" fill="#7ed8b5"/>
+  <rect x="157" y="162" width="58" height="31" rx="6" fill="#7ed8b5"/>
+  <path d="M137 49L144 57L151 49Z" fill="#eef7ff"/>
+  <path d="M144 56V210" stroke="#eef7ff" stroke-width="3"/>
+</svg>

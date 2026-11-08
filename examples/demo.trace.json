@@ -1,0 +1,20 @@
+{
+  "displayTimeUnit": "ns",
+  "traceEvents": [
+    {"ph":"M","name":"process_name","pid":100,"args":{"name":"CPU · scheduler"}},
+    {"ph":"M","name":"process_sort_index","pid":100,"args":{"sort_index":0}},
+    {"ph":"M","name":"thread_name","pid":100,"tid":1,"args":{"name":"Main thread"}},
+    {"ph":"M","name":"process_name","pid":0,"args":{"name":"GPU 0"}},
+    {"ph":"M","name":"process_sort_index","pid":0,"args":{"sort_index":1}},
+    {"ph":"M","name":"thread_name","pid":0,"tid":7,"args":{"name":"stream 7"}},
+    {"ph":"X","name":"model.forward","cat":"user_annotation","pid":100,"tid":1,"ts":0,"dur":10000,"args":{"batch_size":8}},
+    {"ph":"X","name":"aten::matmul","cat":"cpu_op","pid":100,"tid":1,"ts":1000,"dur":1200,"args":{"Input Dims":[[8,4096],[4096,4096]]}},
+    {"ph":"X","name":"cudaLaunchKernel","cat":"cuda_runtime","pid":100,"tid":1,"ts":1500,"dur":180,"args":{"correlation":1}},
+    {"ph":"X","name":"aten::attention","cat":"cpu_op","pid":100,"tid":1,"ts":3000,"dur":800,"args":{}},
+    {"ph":"X","name":"cudaLaunchKernel","cat":"cuda_runtime","pid":100,"tid":1,"ts":3300,"dur":150,"args":{"correlation":2}},
+    {"ph":"X","name":"gemm_kernel","cat":"kernel","pid":0,"tid":7,"ts":1750,"dur":2100,"args":{"correlation":1,"grid":[32,8,1],"block":[128,1,1]}},
+    {"ph":"X","name":"flash_attention_kernel","cat":"kernel","pid":0,"tid":7,"ts":4000,"dur":3500,"args":{"correlation":2,"grid":[8,32,1]}},
+    {"ph":"X","name":"Memcpy DtoH","cat":"gpu_memcpy","pid":0,"tid":7,"ts":8200,"dur":700,"args":{"bytes":32768}},
+    {"ph":"i","name":"batch complete","pid":100,"tid":1,"ts":10000,"s":"t","args":{}}
+  ]
+}

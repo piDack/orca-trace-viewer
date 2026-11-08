@@ -1,0 +1,46 @@
+{
+  "manifestVersion": 2,
+  "id": "trace-viewer",
+  "name": "Trace Viewer",
+  "version": "0.1.1",
+  "description": "View PyTorch and Kineto Chrome traces as an offline CPU/GPU timeline.",
+  "license": "MIT",
+  "repository": "https://github.com/piDack/orca-trace-viewer",
+  "author": { "name": "piDack" },
+  "icon": "assets/icon.png",
+  "cover": {
+    "path": "assets/cover.png",
+    "alt": "Trace Viewer: CPU operations and GPU kernels on a timeline, with search, zoom and event inspection."
+  },
+  "engines": {
+    "orca": ">=1.4.248"
+  },
+  "execution": "sandboxed-ui",
+  "pluginApi": 1,
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "trace-viewer",
+        "title": "Trace",
+        "extensions": [
+          ".trace.json", ".pt.trace.json", ".json"
+        ],
+        "filenames": ["trace.json"],
+        "entry": "editor/index.html",
+        "contentKind": "text",
+        "priority": "default",
+        "frame": "isolated"
+      },
+      {
+        "id": "trace-viewer-gzip",
+        "title": "Trace",
+        "extensions": [".trace.json.gz", ".pt.trace.json.gz", ".json.gz"],
+        "filenames": ["trace.json.gz"],
+        "entry": "editor/index.html",
+        "contentKind": "bytes",
+        "priority": "default",
+        "frame": "isolated"
+      }
+    ]
+  }
+}
